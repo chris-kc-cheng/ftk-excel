@@ -4,7 +4,8 @@ Excel formulas that implements the most commonly used functions that are frequen
 User defined functions are written in plain Excel formulas without VBA.
 Functions written so far include:
 
-1. Annualized Returns
+1. Trailing Returns
+2. Rolling Returns
 2. Up/Down Market Capture
 3. Sortino Ratio
 4. Maximum Drawdown
