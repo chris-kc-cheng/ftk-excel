@@ -17,7 +17,7 @@ Functions written so far include:
 
 Excel's built-in stacked column chart cannot span the X axis. To workaround this limitation, we have to create two series (positive and negative) as well as blank. In [quartile.xlsx](quartile.xlsx), we used dynamic array formulas to construct the required series.
 
-![Quartile Chart](images\quartile.png "Quartile Chart")
+![Quartile Chart](images/quartile.png "Quartile Chart")
 
 Credit: https://peltiertech.com/Excel/Charts/StackedColumnsAboveAndBelow.html
 
