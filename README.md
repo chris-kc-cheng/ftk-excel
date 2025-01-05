@@ -5,10 +5,10 @@ User defined functions are written in plain Excel formulas without VBA.
 Functions written so far include:
 
 1. Trailing Returns
-2. Rolling Returns
-2. Up/Down Market Capture
-3. Sortino Ratio
-4. Maximum Drawdown
+2. Rolling Returns, Volatility, Beta
+3. Up/Down Market Capture
+4. Sortino Ratio
+5. Maximum Drawdown
 
 ## Appendix 1: List of Excel's Dynamic Array Formulas
 | Lookup  | Lambda    | Shaping    | Summarizing | Miscellaneous |
