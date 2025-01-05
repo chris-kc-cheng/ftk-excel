@@ -7,11 +7,17 @@ User defined functions are written in plain Excel formulas as lambda function in
 
 Functions written so far include:
 
-1. Trailing Returns
-2. Rolling Returns, Volatility, Beta, Alpha and Jensen's Alpha
+1. Returns
+2. Volatility, Beta, Alpha and Jensen's Alpha
 3. Up/Down Market Capture
 4. Sortino Ratio
 5. Maximum Drawdown
+
+Note that there is a generic formula `ROLLING` that can be combined with other formulas to calculate rolling statistics e.g.
+```Excel
+=ROLLING(rng, 12, RETURNS)
+=ROLLING(HSTACK(fnd, idx), 36, BETA)
+```
 
 ## Quartile Chart (Stacked Column Chart) with Negative Values
 
