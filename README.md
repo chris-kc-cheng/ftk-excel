@@ -8,7 +8,7 @@ User defined functions are written in plain Excel formulas as lambda function in
 Functions written so far include:
 
 1. Trailing Returns
-2. Rolling Returns, Volatility, Beta
+2. Rolling Returns, Volatility, Beta, Alpha and Jensen's Alpha
 3. Up/Down Market Capture
 4. Sortino Ratio
 5. Maximum Drawdown
@@ -17,7 +17,7 @@ Functions written so far include:
 
 Excel's built-in stacked column chart cannot span the X axis. To workaround this limitation, we have to create two series (positive and negative) as well as blank. In [quartile.xlsx](quartile.xlsx), we used dynamic array formulas to construct the required series.
 
-![Quartile Chart](images/quartile.png "Quartile Chart")
+<img src="images/quartile.png" alt="Quartile Chart" width="500" />
 
 Credit: https://peltiertech.com/Excel/Charts/StackedColumnsAboveAndBelow.html
 
