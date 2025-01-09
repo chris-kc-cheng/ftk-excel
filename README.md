@@ -13,9 +13,10 @@ Functions written so far include:
 4. Sortino Ratio
 5. Maximum Drawdown
 
-Note that there is a generic formula `ROLLING` that can be combined with other formulas to calculate rolling statistics e.g.
-```Excel
-=ROLLING(rng, 12, RETURNS)
+Note that there is a generic formula `TRAILING`, `ROLLING` that can be combined with other formulas to calculate rolling statistics e.g.
+
+```swift
+=TRAILING(rng, 12, RETURNS)
 =ROLLING(HSTACK(fnd, idx), 36, BETA)
 ```
 
