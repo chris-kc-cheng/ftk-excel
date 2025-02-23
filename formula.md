@@ -34,3 +34,7 @@
     )
 )
 ```
+
+### CUMULATIVE
+```swift
+```
