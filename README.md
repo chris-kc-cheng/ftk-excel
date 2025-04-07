@@ -1,32 +1,47 @@
 # Financial Toolkit in Excel
 
-## Useful functions
-Excel formulas that implements the most commonly used functions by an investment professional.
+## Time Series Analysis
 
-User defined functions are written in plain Excel formulas as lambda function in named range. No VBA is used.
+The Excel spreadsheet [ftk.xlsx](ftk.xlsx) implements the most commonly used functions for time series analysis. All function are user defined functions written in plain Excel formulas as lambda functions and stored in name range. No VBA is used.
 
-Functions written so far include:
+<details>
+    <summary>My journey of time series analysis using Microsoft Excel</summary>
 
-1. Returns
-2. Volatility, Beta, Alpha and Jensen's Alpha
-3. Up/Down Market Capture
-4. Sortino Ratio
-5. Maximum Drawdown
+    Excel is more than 40 years old but it remains to be one of the most widely used application software in the world for a good reason - it constantly updates.
 
-Note that there is a generic formula `TRAILING`, `ROLLING` that can be combined with other formulas to calculate rolling statistics e.g.
+    Time series analysis
 
-```swift
-=TRAILING(rng, 12, RETURNS)
-=ROLLING(HSTACK(fnd, idx), 36, BETA)
-```
+    VBA
+
+    CSF
+
+    Spill, dynamic array function
+
+    Python, but slow
+</details>
+
+Functions are classified in the following categories:
+
+1. Performance
+2. Risk
+3. Regression
+4. Efficiency
+5. Value at Risk
+6. Time Horizon
+
+For details, please refer to [the formula sheet](formula.md).
 
 ## Quartile Chart (Stacked Column Chart) with Negative Values
 
-Excel's built-in stacked column chart cannot span the X axis. To workaround this limitation, we have to create two series (positive and negative) as well as blank. In [quartile.xlsx](quartile.xlsx), we used dynamic array formulas to construct the required series.
+Excel's built-in stacked column chart cannot span the X axis. To workaround this limitation, we have to create two series (positive and negative) as well as blank. In the [quartile.xlsx](quartile.xlsx), spreadsheet we used dynamic array formulas to construct the required series.
 
 <img src="images/quartile.png" alt="Quartile Chart" width="500" />
 
 Credit: https://peltiertech.com/Excel/Charts/StackedColumnsAboveAndBelow.html
+
+## Black Scholes Model
+
+
 
 ## Appendix 1: List of Excel's Dynamic Array Formulas
 | Lookup  | Lambda    | Shaping    | Summarizing | Miscellaneous |
