@@ -21,7 +21,7 @@ The spreadsheet provides Python implementations of the same functions for compar
 
 ## Project 2: Quartile Chart (Stacked Column Chart) with Negative Values
 
-Excel's built-in stacked column chart cannot span the X axis. To workaround this limitation, we have to create two series (positive and negative) as well as blank. In the [quartile.xlsx](quartile.xlsx), spreadsheet we used dynamic array formulas to construct the required series.
+Excel's built-in stacked column chart cannot span across the X-axis. To work around this limitation, we create two series (positive and negative) along with a blank series. In the [quartile.xlsx](quartile.xlsx) spreadsheet, we used dynamic array formulas to generate the required series.
 
 <img src="images/quartile.png" alt="Quartile Chart" />
 
@@ -29,7 +29,7 @@ Credit: https://peltiertech.com/Excel/Charts/StackedColumnsAboveAndBelow.html
 
 ## Project 3: Black Scholes Model
 
-The [bsm.xlsx](bsm.xlsx) demonstrates how theoretical option values, based on the Black-Scholes model, change with variations in a single input while keeping all other inputs constant.
+The [bsm.xlsx](bsm.xlsx) spreadsheet demonstrates how theoretical option values, based on the Black-Scholes model, change with variations in a single input while keeping all other inputs constant.
 
 <img src="images/options.png" alt="Option Values" />
 
