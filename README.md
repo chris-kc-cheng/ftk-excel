@@ -37,13 +37,13 @@ The [bsm.xlsx](bsm.xlsx) spreadsheet demonstrates how theoretical option values,
 
 ### Real time index data
 
-The [MSCI Real Time Index.xlsx](MSCI%20Real%20Time%20Index.xlsx) spreadsheet uses PowerQuery to retrieve real-time performance data from the [MSCI website](https://www.msci.com/real-time-index-data-search) and displays it in a table format. The data is delayed by 20 minutes and is refreshed every minute. The base currency is predetermined and not user-configurable.
+The [MSCI Real Time Index.xlsx](MSCI%20Real%20Time%20Index.xlsx) spreadsheet uses Power Query to retrieve real-time performance data from the [MSCI website](https://www.msci.com/real-time-index-data-search) and displays it in a table format. The data is delayed by 20 minutes and is refreshed every minute. The base currency is predetermined and not user-configurable.
 
 <img src="images/msci-rt.png" alt="MSCI Real-Time Index" />
 
 ### End of day index data
 
-The [MSCI End of Day Index.xlsx](MSCI%20End%20of%20Day%20Index.xlsx) spreadsheet uses PowerQuery to retrieve end-of-day performance data from the [MSCI website](https://www.msci.com/end-of-day-data-search). The table presents performance data as price returns in CAD terms by default. However, the index variant (e.g., net or gross total return), currency, data frequency, as well as the start and end dates are all user-configurable.
+The [MSCI End of Day Index.xlsx](MSCI%20End%20of%20Day%20Index.xlsx) spreadsheet uses Power Query to retrieve end-of-day performance data from the [MSCI website](https://www.msci.com/end-of-day-data-search). The table presents performance data as price returns in CAD terms by default. However, the index variant (e.g., net or gross total return), currency, data frequency, as well as the start and end dates are all user-configurable.
 
 <img src="images/msci-eod.png" alt="MSCI End of Day Index" />
 
