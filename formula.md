@@ -45,7 +45,9 @@ R_{\text{annualized}} = (1 + R_{\text{cumulative}})^{\frac{1}{T}} - 1
 ### Growth of $100
 `GROWTHOF` returns the growth of $100 over a period.
 
-$$ \text{Growth of \$100} = 100 \times \prod_{t=1}^{n}(1 + r_t) $$
+$$
+\text{Growth of \$100} = 100 \times \prod_{t=1}^{n}(1 + r_t)
+$$
 
 ```swift
 =LAMBDA(
@@ -60,7 +62,9 @@ $$ \text{Growth of \$100} = 100 \times \prod_{t=1}^{n}(1 + r_t) $$
 
 ### Number of Observations
 `PER`
-$$ N = \text{length of } \{ r_1, r_2, ..., r_n \} $$
+$$
+N = \text{length of } \{ r_1, r_2, ..., r_n \}
+$$
 ```swift
 =LAMBDA(
     ts,
