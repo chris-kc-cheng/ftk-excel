@@ -14,7 +14,10 @@ Credit: https://www.excelformulabeautifier.com/
 ## Performance
 ### Cumulative Return
 `CUMRET` is the time-weighted, compounded product of periodic returns over a period.
-$$ R_\text{cumulative} = \prod_{t=1}^{n} (1 + r_t) - 1 $$
+
+$$ R_\text{cumulative} = \prod_{t=1}^{n} (1 + r_t) - 1
+$$
+
 ```Swift
 =LAMBDA(
     ts,
@@ -24,7 +27,12 @@ $$ R_\text{cumulative} = \prod_{t=1}^{n} (1 + r_t) - 1 $$
 
 ### Annualized Return
 `ANNRET` is the geometric mean of returns with respect to one year.
-$$ R_{\text{annualized}} = (1 + R_{\text{cumulative}})^{\frac{1}{T}} - 1 $$
+
+```math
+R_{\text{annualized}} = (1 + R_{\text{cumulative}})^{\frac{1}{T}} - 1
+```
+
+
 ```Swift
 =LAMBDA(
     ts,
@@ -36,7 +44,9 @@ $$ R_{\text{annualized}} = (1 + R_{\text{cumulative}})^{\frac{1}{T}} - 1 $$
 
 ### Growth of $100
 `GROWTHOF` returns the growth of $100 over a period.
+
 $$ \text{Growth of \$100} = 100 \times \prod_{t=1}^{n}(1 + r_t) $$
+
 ```swift
 =LAMBDA(
     ts, init,
@@ -118,7 +128,7 @@ $$ r_{\text{max}} = \max_{t} (r_t) $$
 ```
 
 ### Worst Period
-$$ r_{\text{min}} = \min_{t} (r_t)$$
+$$ r_{\text{min}} = \min_{t} (r_t) $$
 ```swift
 =LAMBDA(
     ts,
@@ -268,7 +278,9 @@ $$ \text{JB} = \frac{n}{6} \left( S^2 + \frac{K^2}{4} \right) $$
 
 ### Max Drawdown
 $$ \text{Max Drawdown} = \max_{t \in [1,T]} \left( \frac{\max_{s \in [1,t]} V_s - V_t}{\max_{s \in [1,t]} V_s} \right) $$
+
 where
+
 $$ \text{V}_t = \text{V}_0 \times \prod_{i=1}^{t}(1 + r_i) $$
 ```swift
 ```
@@ -437,21 +449,21 @@ $$ \text{Information Ratio} = \frac{r_{\text{annual}} - b_{\text{annual}}}{\text
 ```
 
 ### Batting Average
-$$ \text{Batting Average} = \frac{\#(r_t > b_t)}{n} $$
+$$ \text{Batting Average} = \frac{\text{count} (r_t > b_t)}{n} $$
 ```swift
 ```
 ### Up Period Batting Average
-$$ \text{Up Period Batting Average} = \frac{\#\left\{ i : r_{i} > b_{i}, b_{i} > 0 \right\}}{\#\left\{ i : b_{i} > 0 \right\}} $$
+$$ \text{Up Period Batting Average} = \frac{\text{count} \left\{ i : r_{i} > b_{i}, b_{i} > 0 \right\}}{\text{count} \left\{ i : b_{i} > 0 \right\}} $$
 ```swift
 ```
 
 ### Down Period Batting Average
-$$ \text{Down Period Batting Average} = \frac{\#\left\{ i : r_{i} > b_{i}, b_{i} < 0 \right\}}{\#\left\{ i : b_{i} < 0 \right\}} $$
+$$ \text{Down Period Batting Average} = \frac{\text{count} \left\{ i : r_{i} > b_{i}, b_{i} < 0 \right\}}{\text{count}\left\{ i : b_{i} < 0 \right\}} $$
 ```swift
 ```
 
 ### Rolling Batting Average
-$$ \text{Rolling Batting Average (w-month)} = \frac{1}{T - w + 1} \sum_{t=w}^{T} \frac{\#\left\{ i : r_{p,i} > r_{b,i}, i \in [t-w+1, t] \right\}}{\#\left\{ i : r_{b,i}, i \in [t-w+1, t] \right\}} $$
+$$ \text{Rolling Batting Average} = \frac{1}{T - w + 1} \sum_{t=w}^{T} \frac{\text{count} \left\{ i : r_{p,i} > r_{b,i}, i \in [t-w+1, t] \right\}}{\text{count} \left\{ i : r_{b,i}, i \in [t-w+1, t] \right\}} $$
 ```swift
 ```
 
