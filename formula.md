@@ -15,8 +15,9 @@ Credit: https://www.excelformulabeautifier.com/
 ### Cumulative Return
 `CUMRET` is the time-weighted, compounded product of periodic returns over a period.
 
-$$ R_\text{cumulative} = \prod_{t=1}^{n} (1 + r_t) - 1
-$$
+```math
+R_\text{cumulative} = \prod_{t=1}^{n} (1 + r_t) - 1
+```
 
 ```Swift
 =LAMBDA(
@@ -45,9 +46,9 @@ R_{\text{annualized}} = (1 + R_{\text{cumulative}})^{\frac{1}{T}} - 1
 ### Growth of $100
 `GROWTHOF` returns the growth of $100 over a period.
 
-$$
+```math
 \text{Growth of \$100} = 100 \times \prod_{t=1}^{n}(1 + r_t)
-$$
+```
 
 ```swift
 =LAMBDA(
@@ -62,9 +63,9 @@ $$
 
 ### Number of Observations
 `PER`
-$$
+```math
 N = \text{length of } \{ r_1, r_2, ..., r_n \}
-$$
+```
 ```swift
 =LAMBDA(
     ts,
