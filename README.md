@@ -52,37 +52,3 @@ The [MSCI End of Day Index.xlsx](MSCI%20End%20of%20Day%20Index.xlsx) spreadsheet
 The [Stock Monitor](Stock%20Monitor.xlsx) report utilizes Excel’s built-in `Stock` data type and `STOCKHISTORY` formula to retrieve historical stock prices and visualize them using a line chart. A checkbox option allows users to normalize starting prices to $100, making it easier to compare the relative performance of different stocks over time.
 
 <img src="images/stocks.png" alt="Stock Monitor" />
-
-## Appendix 1: List of Excel's Dynamic Array Formulas
-| Lookup  | Lambda    | Shaping    | Summarizing | Miscellaneous |
-|---------|-----------|------------|-------------|---------------|
-| XLOOKUP | LAMBDA    | VSTACK     | FILTER      | LET           |
-| XMATCH  | MAP       | HSTACK     | SORT        | SEQUENCE      |
-|         | REDUCE    | TOROW      | SORTBY      | RANDARRAY     |
-|         | SCAN      | TOCOL      | UNIQUE      | STOCKHISTORY  |
-|         | BYROW     | WRAPROWS   | GROUPBY     |
-|         | BYCOL     | WRAPCOLS   | PIVOTBY     |
-|         | MAKEARRAY | TAKE       |
-|         | ISOMITTED | DROP       |
-|         |           | CHOOSEROWS |
-|         |           | CHOOSECOLS |
-|         |           | EXPAND     |
-
-
-<!--
-<details>
-    <summary>My journey of time series analysis using Microsoft Excel</summary>
-
-    Excel is more than 40 years old but it remains to be one of the most widely used application software in the world for a good reason - it constantly updates.
-
-    Time series analysis
-
-    VBA
-
-    CSF
-
-    Spill, dynamic array function
-
-    Python, but slow
-</details>
--->
