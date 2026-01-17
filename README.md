@@ -61,3 +61,23 @@ Functions are classified in the following categories:
 For details, please refer to [the formula sheet](formula.md).
 
 The spreadsheet provides Python implementations of the same functions for comparison and extended analysis.
+
+## Project 0: Miscellaneous Tools
+
+The [Analytics.xlsx](Analytics.xlsx) spreadsheet contains various financial tools, including:
+
+1. **Geltner unsmoothing** that removes appraisal smoothing by modeling observed returns as an AR(1) process and inverting the autocorrelation to recover the underlying economic return series
+
+```math
+R_{t,\text{true}} = \frac{R_{t,\text{reported}} - \rho R_{t-1,\text{reported}}}{1-\rho}
+
+```
+
+2. **Carino smoothing** that converts multi-period compounded returns into additive period returns
+
+```math
+k = \begin{cases}
+\dfrac{ln(1+r) - ln(1+b)}{r-b} & \text{if } r \neq b \\
+1 & \text{if } r = b
+\end{cases}
+```
