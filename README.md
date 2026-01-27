@@ -81,3 +81,5 @@ k = \begin{cases}
 1 & \text{if } r = b
 \end{cases}
 ```
+
+3. **Frongello Linking Algorithm** that converts multi-period compounded returns into additive period returns by incrementally linking. It does not restate previous attribution results and is path-dependent.
