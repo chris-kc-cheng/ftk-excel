@@ -66,14 +66,14 @@ The spreadsheet provides Python implementations of the same functions for compar
 
 The [Analytics.xlsx](Analytics.xlsx) spreadsheet contains various financial tools, including:
 
-1. **Geltner unsmoothing** that removes appraisal smoothing by modeling observed returns as an AR(1) process and inverting the autocorrelation to recover the underlying economic return series
+**Geltner unsmoothing** that removes appraisal smoothing by modeling observed returns as an AR(1) process and inverting the autocorrelation to recover the underlying economic return series
 
 ```math
 R_{t,\text{true}} = \frac{R_{t,\text{reported}} - \rho R_{t-1,\text{reported}}}{1-\rho}
 
 ```
 
-2. **Carino smoothing** that converts multi-period compounded returns into additive period returns
+**Carino smoothing** that converts multi-period compounded returns into additive period returns
 
 ```math
 k = \begin{cases}
@@ -82,7 +82,15 @@ k = \begin{cases}
 \end{cases}
 ```
 
-3. **Frongello Linking Algorithm** that converts multi-period compounded returns into additive period returns by incrementally linking. It does not restate previous attribution results and is path-dependent. $$  F_{tb} = G_{tb}\prod_{j=1}^{t-1}(1+R_j) + \bar{R_t}\sum_{j=1}^{t-1}F_{jb} $$
-<br/>**Reversed Frongello Linking Algorithm** assigns the cross-product to Allocation instead of Selection $$  F_{tb} = G_{tb}\prod_{j=1}^{t-1}(1+\bar{R_j}) + R_t\sum_{j=1}^{t-1}F_{jb} $$
-<br/>**Modified Frongello Linking Algorithm** evenly split the cross-product between Allocation and Selection $$  F_{tb} = \frac{G_{tb}[\prod_{j=1}^{t-1}(1+R_j) + \prod_{j=1}^{t-1}(1+\bar{R_j})] + (\bar{R_t} + R_t)\sum_{j=1}^{t-1}F_{jb}}{2} $$
+**Frongello Linking Algorithm** that converts multi-period compounded returns into additive period returns by incrementally linking. It does not restate previous attribution results and is path-dependent.
+
+$$  F_{tb} = G_{tb}\prod_{j=1}^{t-1}(1+R_j) + \bar{R_t}\sum_{j=1}^{t-1}F_{jb} $$
+
+**Reversed Frongello Linking Algorithm** assigns the cross-product to Allocation instead of Selection
+
+$$ F_{tb} = G_{tb}\prod_{j=1}^{t-1}(1+\bar{R_j}) + R_t\sum_{j=1}^{t-1}F_{jb} $$
+
+**Modified Frongello Linking Algorithm** evenly split the cross-product between Allocation and Selection
+
+$$  F_{tb} = \frac{G_{tb}[\prod_{j=1}^{t-1}(1+R_j) + \prod_{j=1}^{t-1}(1+\bar{R_j})] + (\bar{R_t} + R_t)\sum_{j=1}^{t-1}F_{jb}}{2} $$
 
