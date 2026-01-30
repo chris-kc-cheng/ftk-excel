@@ -1,7 +1,7 @@
 # Financial Toolkit in Excel
 
 > [!TIP]
-> What's new? [Monte Carlo Simulation](#) (1/11)
+> What's new? [Cox–Ingersoll–Ross Model](#project-0-miscellaneous-tools) (1/30), [Monte Carlo Simulation](#project-6-monte-carlo-simulation-for-portfolio-risk-analysis) (1/11)
 
 ## Project 6: Monte Carlo Simulation for Portfolio Risk Analysis
 
@@ -94,3 +94,15 @@ $$ F_{tb} = G_{tb}\prod_{j=1}^{t-1}(1+\bar{R_j}) + R_t\sum_{j=1}^{t-1}F_{jb} $$
 
 $$  F_{tb} = \frac{G_{tb}[\prod_{j=1}^{t-1}(1+R_j) + \prod_{j=1}^{t-1}(1+\bar{R_j})] + (\bar{R_t} + R_t)\sum_{j=1}^{t-1}F_{jb}}{2} $$
 
+**Cox–Ingersoll–Ross Model**, a classic interest rate model
+
+<img src="images/cir.png" alt="Cox–Ingersoll–Ross Model" />
+
+$$ dr_t = a(b - r_t)\,dt + \sigma \sqrt{r_t}\, dW_t $$
+
+where
+- $𝑟_t$ = interest rate at time 
+- $a$ = speed of mean reversion
+- $b$ = long-term average rate
+- $\sigma$ = volatility
+- $dW_t$ = random shock (Brownian motion)
