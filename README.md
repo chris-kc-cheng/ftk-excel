@@ -78,7 +78,7 @@ R_{t,\text{true}} = \frac{R_{t,\text{reported}} - \rho R_{t-1,\text{reported}}}{
 ```math
 k = \begin{cases}
 \dfrac{ln(1+r) - ln(1+b)}{r-b} & \text{if } r \neq b \\
-1 & \text{if } r = b
+\dfrac{1}{1+r} & \text{if } r = b
 \end{cases}
 ```
 
@@ -106,3 +106,18 @@ where
 - $b$ = long-term average rate
 - $\sigma$ = volatility
 - $dW_t$ = random shock (Brownian motion)
+
+
+## Appendix I: xlwings add-in
+
+The xlwings Excel add-in allows Excel to call user-defined functions (UDFs) written in Python directly from worksheet formulas.
+
+<img src="images/xlwings.png" alt="xlwings" />
+
+Run the following to start a new project:
+
+```bash
+pip install xlwings[all]
+xlwings addin install
+xlwings quickstart udf
+```
