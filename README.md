@@ -84,15 +84,15 @@ k = \begin{cases}
 
 **Frongello Linking Algorithm** that converts multi-period compounded returns into additive period returns by incrementally linking. It does not restate previous attribution results and is path-dependent.
 
-$$  F_{tb} = G_{tb}\prod_{j=1}^{t-1}(1+R_j) + \bar{R_t}\sum_{j=1}^{t-1}F_{jb} $$
+$$ F*{tb} = G*{tb}\prod*{j=1}^{t-1}(1+R_j) + \bar{R_t}\sum*{j=1}^{t-1}F\_{jb} $$
 
 **Reversed Frongello Linking Algorithm** assigns the cross-product to Allocation instead of Selection
 
-$$ F_{tb} = G_{tb}\prod_{j=1}^{t-1}(1+\bar{R_j}) + R_t\sum_{j=1}^{t-1}F_{jb} $$
+$$ F*{tb} = G*{tb}\prod*{j=1}^{t-1}(1+\bar{R_j}) + R_t\sum*{j=1}^{t-1}F\_{jb} $$
 
 **Modified Frongello Linking Algorithm** evenly split the cross-product between Allocation and Selection
 
-$$  F_{tb} = \frac{G_{tb}[\prod_{j=1}^{t-1}(1+R_j) + \prod_{j=1}^{t-1}(1+\bar{R_j})] + (\bar{R_t} + R_t)\sum_{j=1}^{t-1}F_{jb}}{2} $$
+$$ F*{tb} = \frac{G*{tb}[\prod_{j=1}^{t-1}(1+R_j) + \prod_{j=1}^{t-1}(1+\bar{R_j})] + (\bar{R*t} + R_t)\sum*{j=1}^{t-1}F\_{jb}}{2} $$
 
 **Cox–Ingersoll–Ross Model**, a classic interest rate model
 
@@ -101,16 +101,16 @@ $$  F_{tb} = \frac{G_{tb}[\prod_{j=1}^{t-1}(1+R_j) + \prod_{j=1}^{t-1}(1+\bar{R_
 $$ dr_t = a(b - r_t)\,dt + \sigma \sqrt{r_t}\, dW_t $$
 
 where
-- $𝑟_t$ = interest rate at time 
+
+- $𝑟_t$ = interest rate at time
 - $a$ = speed of mean reversion
 - $b$ = long-term average rate
 - $\sigma$ = volatility
 - $dW_t$ = random shock (Brownian motion)
 
-
 ## Appendix I: xlwings add-in
 
-The xlwings Excel add-in allows Excel to call user-defined functions (UDFs) written in Python directly from worksheet formulas.
+The [xlwings](https://docs.xlwings.org/en/latest/) Excel add-in allows Excel to call user-defined functions (UDFs) written in Python directly from worksheet formulas.
 
 <img src="images/xlwings.png" alt="xlwings" />
 
@@ -121,3 +121,5 @@ pip install xlwings[all]
 xlwings addin install
 xlwings quickstart udf
 ```
+
+As an example, the [udf](udf/udf.xlsm) report calls a user-defined function `=yahoo()` to retrieve historical stock prices.
